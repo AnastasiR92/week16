@@ -1,0 +1,99 @@
+body {
+    padding-left: 30rem;
+    padding-right: 35rem;
+    font-family: Arial, sans-serif;
+    background-color: #e1e8ff;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30rem;
+    height: 100vh;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #007bff38;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 255, 0.256);
+  }
+
+  .form-group {
+    margin: 10px 0;
+   
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #007bff; /* Цвет текста метки */
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #007bff; /* Цвет рамки элементов ввода */
+    border-radius: 5px;
+    background-color: #f7f7f7; /* Цвет фона элементов ввода */
+    color: #333; /* Цвет текста в полях ввода */
+    box-sizing: border-box; /* Учесть padding в ширине элемента */
+  }
+
+  .gender-field {
+    display:flex;
+    justify-content: space-around;
+    margin:30px;
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Стили для выделения обязательных полей */
+  input:required,
+  select:required {
+    border-color: #4dffa35f; /* Цвет рамки для обязательных полей */
+  }
+  .errorsInfo {
+    color:red;
+  }
+
+/* Стили для успешной отправки формы (результат на другой странице) */
+#result-container {
+    background-color: #07ad14; /* Цвет фона контейнера с результатами */
+    color: #fff; /* Цвет текста в контейнере с результатами */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

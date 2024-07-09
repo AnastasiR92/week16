@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Результат</title>
+  </head>
+  <body>
+    <div id="result-container"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const jsonData = localStorage.getItem("formData");
+        const data = JSON.parse(jsonData);
+
+        // Вывод данных на страницу
+        const resultContainer = document.getElementById("result-container");
+        resultContainer.innerHTML = JSON.stringify(data, null, 2);
+      });
+    </script>
+  </body>
+</html>

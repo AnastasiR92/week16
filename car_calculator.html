@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/car_calculator.css" />
+    <title>Car Calculator</title>
+  </head>
+  <body>
+    <form name="myForm" id="myForm" novalidate>
+      <h1>Car Calculator</h1>
+      <div class="errorsInfo"></div>
+      <div class="form-group">
+        <label for="car">Марка машины</label>
+        <select name="car" id="car" placeholder="Марка машины" required>
+          <option value="reno">Reno</option>
+          <option value="opel">Opel</option>
+          <option value="mazda">Mazda</option>
+          <option value="jaguar">Jaguar</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="model">Модель машины</label>
+        <select name="model" id="model" placeholder="Модель машины" required>
+          <option value="reno_fluence">Fluence</option>
+          <option value="opel_astra">Astra</option>
+          <option value="mazda_cx">CX-4</option>
+          <option value="jaguar_xe">XE</option>
+        </select>
+      </div>
+      <div class="fuel-field">
+        <label>Вид топлива:</label><br />
+        <label for="gasoline">
+          <input type="radio" name="fuel" id="gasoline" placeholder="Бензин" />
+          Бензин
+        </label>
+        <label for="diesel">
+          <input type="radio" name="fuel" id="diesel" placeholder="Дизель" />
+          Дизель
+        </label>
+        <label for="gas">
+          <input type="radio" name="fuel" id="gas" placeholder="Газ" />
+          Газ
+        </label>
+        <label for="electricity">
+          <input
+            type="radio"
+            name="fuel"
+            id="electricity"
+            placeholder="Электричество"
+          />
+          Электричество
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="amount">Объем двигателя</label>
+        <input
+          type="range"
+          name="amount"
+          id="amount"
+          min="1.1"
+          max="3.5"
+          placeholder="Объем двигателя"
+          required
+        />
+      </div>
+      <div class="condition-field">
+        <label>Состояние автомобиля:</label><br />
+        <label for="condition">
+          <input
+            type="radio"
+            name="condition"
+            id="new"
+            placeholder="Новый"
+            checked
+          />
+          Новый
+        </label>
+        <label for="condition">
+          <input
+            type="radio"
+            name="condition"
+            id="used"
+            placeholder="Подержанный"
+          />
+          Подержанный
+        </label>
+      </div>
+      <div id="owner-field" style="display: none">
+        <label>Количество владельцев:</label><br />
+        <label for="owner">
+          <input
+            type="radio"
+            name="owner"
+            id="one"
+            placeholder="1-2 владельца"
+          />
+          1-2 владельца
+        </label>
+        <label for="owner">
+          <input
+            type="radio"
+            name="owner"
+            id="few"
+            placeholder="более 3-х владельцев"
+          />
+          более 3-х владельцев
+        </label>
+      </div>
+      <div class="payment-field">
+        <label>Способ оплаты:</label><br />
+        <label for="card">
+          <input type="radio" name="payment" id="card" placeholder="Карта" />
+          Карта
+        </label>
+        <label for="cash">
+          <input type="radio" name="payment" id="cash" placeholder="Наличные" />
+          Наличные
+        </label>
+        <label for="invoice">
+          <input
+            type="radio"
+            name="payment"
+            id="invoice"
+            placeholder="Счет на юридическое лицо"
+          />
+          Счет на юридическое лицо
+        </label>
+      </div>
+      <!-- Здесь кнопка -->
+      <button type="submit" id="submitBtn">Найти</button>
+      <p class="error-message" id="errorMessage"></p>
+      <p class="price-message" id="price"></p>
+    </form>
+  </body>
+</html>

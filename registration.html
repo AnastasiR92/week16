@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/registration.css" />
+    <link rel="stylesheet" href="assets/normalize.css" />
+    <title>Форма регистрации</title>
+  </head>
+  <body>
+    <div id="container">
+      <form name="myForm" id="myForm" novalidate>
+        <h1>Форма регистрации</h1>
+        <div class="errorsInfo"></div>
+        <!-- Здесь имя -->
+        <div class="form-group">
+          <label for="name">Имя:</label>
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            placeholder="Имя пользователя"
+            required
+          />
+        </div>
+        <!-- Здесь email -->
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <!-- Здесь возраст -->
+        <div class="form-group">
+          <label for="age">Возраст:</label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            placeholder="Возраст"
+            required
+          />
+        </div>
+        <!-- Здесь пол -->
+        <div class="gender-field">
+          <label>Пол:</label><br />
+          <label for="male">
+            <input type="radio" name="gender" id="male" placeholder="Мужчина" />
+            Мужчина
+          </label>
+          <label for="female">
+            <input
+              type="radio"
+              name="gender"
+              id="female"
+              placeholder="Женщина"
+            />
+            Женщина</label
+          >
+        </div>
+        <!-- Здесь профессия -->
+        <div class="form-group">
+          <label for="profession">Профессия</label>
+          <select
+            name="profession"
+            id="profession"
+            placeholder="Профессия"
+            required
+          >
+            <option value="doctor">Врач</option>
+            <option value="programmist">Программист</option>
+            <option value="teacher">Учитель</option>
+            <option value="desiner">Дизайнер</option>
+            <option value="engineer">Инженер</option>
+            <option value="saler">Продавец</option>
+            <option value="etc">Другое</option>
+          </select>
+        </div>
+        <!-- Здесь пароль -->
+        <div class="form-group">
+          <label for="password">Пароль</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            placeholder="Пароль"
+            pattern="[0-9a-fA-F]{4,8}"
+            required
+          />
+        </div>
+        <!-- Здесь согласие -->
+        <div class="form-group">
+          <input type="checkbox" name="agreeTerms" id="agreeTerms" required />
+          <label for="agreeTerms">Я согласен с условиями</label>
+        </div>
+        <!-- Здесь кнопка -->
+        <button type="submit" id="submitBtn">Отправить</button>
+        <p class="error-message" id="errorMessage"></p>
+      </form>
+    </div>
+    <script src="registration.js"></script>
+  </body>
+</html>
